@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="tset1">
+    <test name="test2">
+        <classes>
+            <class name="com.ttt.testng.groups.GroupsOnClass1"/>
+            <class name="com.ttt.testng.groups.GroupsOnClass2"/>
+            <class name="com.ttt.testng.groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+
+    <test name="test3">
+        <groups>
+            <run>
+                <include name="stu"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.ttt.testng.groups.GroupsOnClass1"/>
+            <class name="com.ttt.testng.groups.GroupsOnClass2"/>
+            <class name="com.ttt.testng.groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+</suite>
