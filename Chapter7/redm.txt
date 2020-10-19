@@ -1,0 +1,2 @@
+moco启动命令：
+java -jar [mocojar地址] [协议http] -p [端口号:8888] -c [config文件地址]

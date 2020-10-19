@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="testlog">
+    <test name="test1">
+        <classes>
+            <class name="com.ttt.demo.TestDemo">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!--配置extentsreports监听测试报告-->
+    <listeners>
+        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>
+    </listeners>
+</suite>
