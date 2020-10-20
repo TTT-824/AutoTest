@@ -13,6 +13,7 @@
     </test>
 <!--配置extentsreports监听测试报告-->
     <listeners>
-        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>
+<!--        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>-->
+        <listeners class-name="com.ttt.demo.ExtentTestNGIReporterListener"/>
     </listeners>
 </suite>

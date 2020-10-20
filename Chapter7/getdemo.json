@@ -1,0 +1,7 @@
+[
+  {
+    "description": "miaoshu",
+    "request": {"uri": "/getdemo","method": "get","queries": {"name": "haha","sex": "10"}},
+    "response": {"text": "success"}
+  }
+]
