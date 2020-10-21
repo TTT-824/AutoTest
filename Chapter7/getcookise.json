@@ -1,0 +1,12 @@
+[
+  {
+    "description": "获取返回的cookies",
+    "request": {"uri": "/getcookies","method": "get"},
+    "response": {"cookies": {"login":"1"},"text": "success"}
+  },
+  {
+    "description": "携带cookies的get请求",
+    "request": {"uri": "/getcookies/getcook","method": "get","cookies": {"login":"1"}},
+    "response": {"text": "success"}
+  }
+]
