@@ -31,6 +31,8 @@ public class Test {
         for (int i = 0; i < 2; i++) {
             if ((str = in.readLine()) != null && i == 0){
                 System.out.println(str);
+                String[] split = str.split("，");
+                System.out.println(split[0]);
             }else if ((str = in.readLine()) == null){
                 break;
             }

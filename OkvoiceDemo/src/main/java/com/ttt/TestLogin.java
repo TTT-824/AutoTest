@@ -10,6 +10,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -17,6 +18,7 @@ import java.net.URISyntaxException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+@Test(groups = "login")
 public class TestLogin {
 
     //    save变量
@@ -24,13 +26,14 @@ public class TestLogin {
     private ResourceBundle bundle;
 
     @Test
-    public void withTestLogin() throws IOException, URISyntaxException {
+    @DataProvider(name = "token")
+    public Object[][] withTestLogin() throws IOException, URISyntaxException {
 //        获取配置文件
         bundle = ResourceBundle.getBundle("application", Locale.CHINA);
 //        获取url 设置get请求的参数
-        URIBuilder uriBuilder = new URIBuilder(bundle.getString("devurl") + bundle.getString("user.login"));
+        URIBuilder uriBuilder = new URIBuilder(bundle.getString("testurl") + bundle.getString("user.login"));
         uriBuilder.addParameter("phone", "18398932805");
-        uriBuilder.addParameter("password", "wyy18398932805");
+        uriBuilder.addParameter("password", "a1111111");
         uriBuilder.addParameter("source", "android");
 //        模拟请求
         HttpPost httpPost = new HttpPost(uriBuilder.toString());
@@ -43,6 +46,10 @@ public class TestLogin {
         System.out.println(jsonObject.toString());
 //        设置请求头信息
         httpPost.setHeader("content-type", "application/json;charset=UTF-8");
+//        设置token
+        /*
+        * httpPost.setHeader("authorization", "token");
+        * */
 //        设置参数到方法中
         StringEntity stringEntity = new StringEntity(jsonObject.toString(), "utf-8");
         httpPost.setEntity(stringEntity);
@@ -66,13 +73,19 @@ public class TestLogin {
         String data = String.valueOf(jsonObject1.get("data"));
         JSONObject jsonObject2 = new JSONObject(data);
         Object token = jsonObject2.get("token");
+//        获取userid
+        Object userid = jsonObject2.get("id");
 
         System.out.println(token);
         System.out.println(msg);
         System.out.println(code);
 //        断言
-        Assert.assertEquals(code,200);
+        Assert.assertEquals(code, 200);
         Assert.assertEquals(msg, "操作成功");
 
+        return new Object[][]{
+                {String.valueOf(token)}
+//                ,{String.valueOf(userid)}
+        };
     }
 }

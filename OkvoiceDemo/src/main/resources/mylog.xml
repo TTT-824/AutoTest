@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="test">
+    <test name="testlogin">
+        <classes>
+            <class name="com.ttt.TestLogin">
+                <methods>
+                    <include name="withTestLogin"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--配置extentsreports监听测试报告-->
+    <listeners>
+        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>
+        <!--        <listeners class-name="com.ttt.demo.ExtentTestNGIReporterListener"/>-->
+    </listeners>
+</suite>
