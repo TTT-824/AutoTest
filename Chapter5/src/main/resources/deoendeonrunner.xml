@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="dependeon_test">
+    <test name="testoneandtwo">
+        <classes>
+            <class name="com.ttt.testng.dependon.TestOne"/>
+            <class name="com.ttt.testng.dependon.TestTwo"/>
+        </classes>
+    </test>
+</suite>
