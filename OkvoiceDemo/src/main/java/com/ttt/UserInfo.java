@@ -37,7 +37,7 @@ public class UserInfo {
 //        获取配置文件
         bundle = ResourceBundle.getBundle("application", Locale.CHINA);
 //        获取url 设置get请求的参数
-        URIBuilder uriBuilder = new URIBuilder(bundle.getString("newtaskurl") + bundle.getString("newtaskmeber.info"));
+        URIBuilder uriBuilder = new URIBuilder(bundle.getString("devurl") + bundle.getString("newtaskmeber.info"));
         uriBuilder.addParameter("userId", "57783");
         System.out.println(token);
         //        模拟请求

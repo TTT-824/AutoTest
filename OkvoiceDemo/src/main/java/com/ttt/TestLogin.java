@@ -31,7 +31,7 @@ public class TestLogin {
 //        获取配置文件
         bundle = ResourceBundle.getBundle("application", Locale.CHINA);
 //        获取url 设置get请求的参数
-        URIBuilder uriBuilder = new URIBuilder(bundle.getString("testurl") + bundle.getString("user.login"));
+        URIBuilder uriBuilder = new URIBuilder(bundle.getString("devurl") + bundle.getString("user.login"));
         uriBuilder.addParameter("phone", "18398932805");
         uriBuilder.addParameter("password", "a1111111");
         uriBuilder.addParameter("source", "android");
