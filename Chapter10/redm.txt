@@ -1,0 +1,2 @@
+swagger-ui访问地址
+http://localhost:8066/swagger-ui.html

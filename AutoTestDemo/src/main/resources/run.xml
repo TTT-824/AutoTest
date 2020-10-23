@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="newtask_Api_AutoTest">
+    <test name="login">
+        <classes>
+            <class name="com.ttt.login.Login"/>
+            <class name="com.ttt.task.MemberInfo"/>
+            <class name="com.ttt.task.TaskList"/>
+        </classes>
+    </test>
+
+    <!--配置extentsreports监听测试报告-->
+    <listeners>
+        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>
+    </listeners>
+</suite>
