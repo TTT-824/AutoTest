@@ -1,0 +1,20 @@
+server:
+  port: 8066
+
+logging:
+  path: logs
+  file: mylog.log
+
+spring:
+  application:
+    name: myTest
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ttt?serverTimezone=GMT
+    username: root
+    password: 183989
+
+mybatis:
+  type-aliases-package: com.ttt.model
+  mapper-locations:
+    - mapper/*

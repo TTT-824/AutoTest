@@ -6,18 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SprongBootDemo" />
+        <module name="Chapter11" />
+        <module name="Chapter10" />
+        <module name="AutoTestDemo" />
         <module name="Chapter9" />
         <module name="Chapter6" />
         <module name="Chapter5" />
-        <module name="AutoTestDemo" />
         <module name="OkvoiceDemo" />
-        <module name="Chapter10" />
-        <module name="SprongBootDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AutoTestDemo" target="1.5" />
       <module name="Chapter10" target="1.8" />
+      <module name="Chapter11" target="1.8" />
       <module name="Chapter5" target="1.5" />
       <module name="Chapter6" target="6" />
       <module name="Chapter7" target="1.5" />
@@ -30,6 +32,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Chapter10" options="-parameters" />
+      <module name="Chapter11" options="-parameters" />
       <module name="SprongBootDemo" options="-parameters" />
     </option>
   </component>
