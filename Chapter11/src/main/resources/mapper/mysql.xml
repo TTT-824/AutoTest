@@ -5,8 +5,8 @@
 
 <mapper namespace="com.ttt">
 
-    <select id="getUserCount" resultType="Integer">
-        select count(*) from user;
+    <select id="getUserCount" resultType="com.ttt.model.User">
+        select * from user;
     </select>
 
     <insert id="addUser" parameterType="com.ttt.model.User">

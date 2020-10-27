@@ -11,6 +11,7 @@
         <module name="Chapter10" />
         <module name="AutoTestDemo" />
         <module name="Chapter9" />
+        <module name="Chapter0" />
         <module name="Chapter6" />
         <module name="Chapter5" />
         <module name="OkvoiceDemo" />
@@ -18,6 +19,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AutoTestDemo" target="1.5" />
+      <module name="Chapter0" target="8" />
       <module name="Chapter10" target="1.8" />
       <module name="Chapter11" target="1.8" />
       <module name="Chapter5" target="1.5" />
